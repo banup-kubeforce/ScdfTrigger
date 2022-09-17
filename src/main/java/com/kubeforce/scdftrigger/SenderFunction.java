@@ -1,4 +1,4 @@
-package com.kubeforce.scdffunctiontigger;
+package com.kubeforce.scdftrigger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,7 +11,7 @@ public class SenderFunction implements Function<String,String> {
     private QueueSender queueSender;
     @Override
     public String apply(String s) {
-        queueSender.send("test message");
+        queueSender.send("Vehicle:SUV,Make:Ford,Model:Edge,Year:2021");
         return "ok. done";
     }
 }
